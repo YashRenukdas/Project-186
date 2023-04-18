@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset = "utf-8">
+        <title>Fun with SPE Particle System</title>
+
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-spe-particles-component@^1.0.4/dist/aframe-spe-particles-component.min.js"></script>
+    </head>
+
+    <body>
+        
+     <a-scene id = "scene">
+
+        <a-entity position = "0 1 0" spe-particles = "
+        color: green;
+        distribution: sphere;
+        randomize-velocity: true;
+        radius: 3;
+        particle-count: 2500;
+        velocity: 1;
+        velocity-spread: 15;
+        drag: 1;
+        max-age: 3;
+        duration: -1;
+        blending: additive;
+        randomize-angle: true
+        active-multiplier: 1000;
+        size: 0.5, 0.5, 0.5, 0;">
+        </a-entity>
+
+        <a-entity position = "0 1 0" spe-particles = "
+        color: white;
+        distribution: sphere;
+        randomize-velocity: true;
+        radius: 3;
+        particle-count: 2500;
+        velocity: 1;
+        velocity-spread: 15;
+        drag: 1;
+        max-age: 3;
+        duration: -1;
+        blending: additive;
+        randomize-angle: true
+        active-multiplier: 1000;
+        size: 0.5, 0.5, 0.5, 0;">
+        </a-entity>
+
+        <a-entity position = "0 1 0" spe-particles = "
+        color: lime;
+        distribution: hexagon;
+        randomize-velocity: true;
+        radius: 3;
+        particle-count: 2500;
+        velocity: 1;
+        velocity-spread: 50;
+        drag: 1;
+        max-age: 3;
+        duration: -1;
+        blending: additive;
+        rotation: 70;
+        has-perspective: true;
+        randomize-rotation: true
+        active-multiplier: 1000;
+        size: 2, 2, 2, 0;">
+        </a-entity>
+
+    <a-sky color = "#000000"></a-sky>
+    <a-camera position = "0 0 30"></a-camera>
+
+     </a-scene>
+
+    </body>
+</html>
